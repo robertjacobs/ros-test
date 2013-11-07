@@ -1,0 +1,17 @@
+<package>
+  <description brief="smach_test">
+
+     smach_test
+
+  </description>
+  <author>Robert Jacobs</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/smach_test</url>
+  <depend package="tf"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+
+</package>
+
+

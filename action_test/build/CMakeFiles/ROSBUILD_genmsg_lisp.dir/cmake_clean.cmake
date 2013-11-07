@@ -1,0 +1,39 @@
+FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../msg_gen"
+  "../src/action_test/msg"
+  "CMakeFiles/ROSBUILD_genmsg_lisp"
+  "../msg_gen/lisp/MessageAction.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageAction.lisp"
+  "../msg_gen/lisp/MessageGoal.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageGoal.lisp"
+  "../msg_gen/lisp/MessageActionGoal.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageActionGoal.lisp"
+  "../msg_gen/lisp/MessageResult.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageResult.lisp"
+  "../msg_gen/lisp/MessageActionResult.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageActionResult.lisp"
+  "../msg_gen/lisp/MessageFeedback.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageFeedback.lisp"
+  "../msg_gen/lisp/MessageActionFeedback.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_MessageActionFeedback.lisp"
+  "../msg/MessageAction.msg"
+  "../msg/MessageGoal.msg"
+  "../msg/MessageActionGoal.msg"
+  "../msg/MessageResult.msg"
+  "../msg/MessageActionResult.msg"
+  "../msg/MessageFeedback.msg"
+  "../msg/MessageActionFeedback.msg"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang)
+  INCLUDE(CMakeFiles/ROSBUILD_genmsg_lisp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

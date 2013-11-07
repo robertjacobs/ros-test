@@ -1,0 +1,15 @@
+<package>
+  <description brief="image_test">
+
+     image_test
+
+  </description>
+  <author>Robert Jacobs</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/image_test</url>
+  <depend package="roscpp"/>
+
+</package>
+
+

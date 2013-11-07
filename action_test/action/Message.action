@@ -1,0 +1,11 @@
+# Washes your laundry
+#
+# goal message = the request
+float64 number		# the number of items to wash
+---
+# result message
+float64 itemsWashed	# the number of items washed
+---
+# feedback message
+# here you might define some intermediate feedback message that reports about the current status of computation -> useful if the handling of the request might take several seconds or longer
+float32 percentageDone	# this is just a number telling how far the action accomplished the task (in the program the computations are delayed to show the effect)

@@ -1,0 +1,21 @@
+<package>
+  <description brief="image_test">
+
+     image_test
+
+  </description>
+  <author>Robert Jacobs</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/image_test</url>
+  <depend package="roscpp"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="sensor_msgs"/>
+  <depend package="message_filters"/>
+  <depend package="image_transport"/>
+</package>
+
+

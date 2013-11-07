@@ -1,0 +1,7 @@
+# Takes the input and increases input by one
+#
+# request message
+float64 number		# the number which shall be increased
+---
+# response message
+float64 numberIncreased	# the increased number

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rmb-rj/git/ros-test/smach_test/build/devel/setup.sh

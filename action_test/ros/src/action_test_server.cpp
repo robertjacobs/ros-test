@@ -1,0 +1,44 @@
+#include "action_test/action_test_server.h"
+
+WashActionServer::WashActionServer(ros::NodeHandle nh)
+: action_server_wash_(nh, "wash_action", boost::bind(&WashActionServer::wash, this, _1), false)	// this initializes the action server; important: always set the last parameter to false
+{
+	node_ = nh;
+}
+
+
+void WashActionServer::init()
+{
+	// by starting the action server, your action gets advertised to other software modules
+
+	action_server_wash_.start();
+}
+
+
+void WashActionServer::wash(const action_test::MessageGoalConstPtr& goal)
+{
+	// this callback function is executed each time a request (= goal message) comes in for this service server
+	// here we just read the number from the goal message, square it and put the result into the result message
+
+	ROS_INFO("Action Server: Received a request with number %i.", goal->number);
+
+	ros::Rate loop_rate(0.5);
+	loop_rate.sleep();	
+
+	action_test::MessageFeedback feedback;
+	feedback.percentageDone = 25;
+	action_server_wash_.publishFeedback(feedback);
+
+	loop_rate.sleep();
+
+	feedback.percentageDone = 75;
+	action_server_wash_.publishFeedback(feedback);
+
+	loop_rate.sleep();
+
+	action_test::MessageResult res;
+	res.itemsWashed = goal->number;
+
+	// this sends the response back to the caller
+	action_server_wash_.setSucceeded(res);
+}

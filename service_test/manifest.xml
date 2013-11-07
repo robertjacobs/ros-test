@@ -1,0 +1,17 @@
+<package>
+  <description brief="service_test">
+
+     service_test
+
+  </description>
+  <author>Robert Jacobs</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/service_test</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

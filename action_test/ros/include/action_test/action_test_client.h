@@ -1,0 +1,24 @@
+#include "ros/ros.h"
+
+// actions
+#include <actionlib/client/simple_action_client.h>
+#include <action_test/MessageAction.h> // here you have to include the header file with exactly the same name as your message in the /action folder (the Message.h is automatically generated from your Message.action file during compilation)
+
+// this typedef just establishes the abbreviation SquareActionServer for the long data type
+typedef actionlib::SimpleActionClient<action_test::MessageAction> t_WashActionClient;
+
+class WashActionClient
+{
+public:
+	WashActionClient(ros::NodeHandle nh);
+	bool init();
+	void run();
+
+protected:
+	void doneCb(const actionlib::SimpleClientGoalState& state, const action_test::MessageResultConstPtr& result);
+	void activeCb();
+	void feedbackCb(const action_test::MessageFeedbackConstPtr& feedback);
+
+	ros::NodeHandle node_;
+	t_WashActionClient action_client_wash_; ///< Action client which wants to wash
+};
